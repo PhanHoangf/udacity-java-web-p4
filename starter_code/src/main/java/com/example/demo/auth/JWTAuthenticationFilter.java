@@ -51,7 +51,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         String token = JWT.create()
                 .withSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
-                .withExpiresAt(new Date(System.currentTimeMillis() + 2000))
+                .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
                 .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
         res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
     }
