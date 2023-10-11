@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +32,17 @@ public class CartController {
 	
 	@Autowired
 	private ItemRepository itemRepository;
-	
+
+	@GetMapping
+	public String test() {
+		return "Heelo cart";
+	}
+
+	@PostMapping("/abc")
+	public String testCreate() {
+		return "Hello create";
+	}
+
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
