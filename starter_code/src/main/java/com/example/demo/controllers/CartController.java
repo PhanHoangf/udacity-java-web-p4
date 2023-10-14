@@ -23,25 +23,15 @@ import com.example.demo.model.requests.ModifyCartRequest;
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private CartRepository cartRepository;
-	
+
 	@Autowired
 	private ItemRepository itemRepository;
-
-	@GetMapping
-	public String test() {
-		return "Heelo cart";
-	}
-
-	@PostMapping("/abc")
-	public String testCreate() {
-		return "Hello create";
-	}
 
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
@@ -53,13 +43,16 @@ public class CartController {
 		if(!item.isPresent()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
+
 		Cart cart = user.getCart();
+
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
+
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
-	
+
 	@PostMapping("/removeFromCart")
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
@@ -76,5 +69,5 @@ public class CartController {
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
-		
+
 }
