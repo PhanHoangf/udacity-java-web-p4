@@ -20,6 +20,14 @@
     	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>splunk-artifactory</id>
+			<name>Splunk Releases</name>
+			<url>https://splunk.jfrog.io/splunk/ext-releases-local</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -84,6 +92,20 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.splunk.logging</groupId>
+			<artifactId>splunk-library-javalogging</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -25,9 +25,8 @@ public class UserOrder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
-	@Column
-	private Long id;
-	
+	private long id;
+
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JsonProperty
 	@Column
@@ -42,7 +41,7 @@ public class UserOrder {
 	@Column
 	private BigDecimal total;
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
