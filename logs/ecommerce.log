@@ -1,0 +1,15 @@
+2023-10-15 16:50:27,787 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on DESKTOP-61EIERE with PID 29492 (D:\Udacity\Java-web\java-web-p4\starter_code\target\classes started by Admin in D:\Udacity\Java-web\java-web-p4)
+2023-10-15 16:50:27,791 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2023-10-15 16:50:27,791 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2023-10-15 16:50:29,644 DEBUG c.e.d.a.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2023-10-15 16:50:30,119 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 2.698 seconds (JVM running for 3.403)
+2023-10-15 16:50:30,121 INFO c.e.d.SareetaApplication [main] Ecommerce Application Started
+2023-10-15 16:51:25,118 INFO c.e.d.c.UserController [http-nio-9090-exec-3] Start create user...
+2023-10-15 16:51:25,118 INFO c.e.d.c.UserController [http-nio-9090-exec-3] User name set with HoangPT112
+2023-10-15 16:51:25,217 INFO c.e.d.c.UserController [http-nio-9090-exec-3] Create user success!
+2023-10-15 16:55:35,790 DEBUG c.e.d.a.JWTAuthenticationFilter [http-nio-9090-exec-2] Request is to process authentication
+2023-10-15 16:55:46,949 INFO c.e.d.c.OrderController [http-nio-9090-exec-10] Start create order...
+2023-10-15 16:55:46,955 INFO c.e.d.c.OrderController [http-nio-9090-exec-10] Create order success
+2023-10-15 17:05:53,761 INFO c.e.d.c.UserController [http-nio-9090-exec-4] Start create user...
+2023-10-15 17:05:53,761 INFO c.e.d.c.UserController [http-nio-9090-exec-4] User name set with HoangPT
+2023-10-15 17:05:53,825 INFO c.e.d.c.UserController [http-nio-9090-exec-4] Create user success!
